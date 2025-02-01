@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纯CSS边界碰撞</title>   
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        } 
+    
+        div{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: skyblue;
+            animation: ami_w 3.6s infinite linear alternate,
+                  ami_h 2.3s infinite linear alternate;
+        }
+    
+        @keyframes ami_w{
+            to{
+                left: calc(100vw - 150px);
+            }
+        }
+        @keyframes ami_h {
+            to{
+                top: calc(100vh - 150px);
+            }
+        }
+    </style>
+     
+</head>
+
+<body>
+    <div></div>
+</body>
+</html>
